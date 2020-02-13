@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.unknown.speedtimestables">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_speed_times_tables"
+        android:label="스피드 구구단"
+        android:roundIcon="@mipmap/ic_speed_times_tables_round"
+        android:supportsRtl="true"
+        android:theme="@style/MyNoActionBarTheme">
+        <activity android:name="com.unknown.speedtimestables.RestartActivity"></activity>
+        <activity android:name="com.unknown.speedtimestables.GameActivity" />
+        <activity android:name="com.unknown.speedtimestables.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
