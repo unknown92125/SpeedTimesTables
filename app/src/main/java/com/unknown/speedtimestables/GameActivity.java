@@ -65,10 +65,30 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         String stage = "STAGE " + stageNum;
         tvStage.setText(stage);
 
-        maxProgress -= (maxProgress / 7);
-        progressBar.setMax(maxProgress);
-        progress = maxProgress;
-        Log.e("GameA", maxProgress + "");
+        if (stageNum < 5) {
+            maxProgress -= (maxProgress / 7);
+            progressBar.setMax(maxProgress);
+            progress = maxProgress;
+        } else if (stageNum < 10) {
+            maxProgress -= (maxProgress / 10);
+            progressBar.setMax(maxProgress);
+            progress = maxProgress;
+        } else if (stageNum < 15) {
+            maxProgress -= (maxProgress / 12);
+            progressBar.setMax(maxProgress);
+            progress = maxProgress;
+        } else if (stageNum < 25) {
+            maxProgress -= (maxProgress / 15);
+            progressBar.setMax(maxProgress);
+            progress = maxProgress;
+        } else {
+            maxProgress = 1000;
+            progressBar.setMax(maxProgress);
+            progress = maxProgress;
+        }
+
+
+        Log.e("GameA", stageNum + " : " + maxProgress + "");
 
         num1 = getRandomNum();
         num2 = getRandomNum();
